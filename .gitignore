@@ -1,0 +1,33 @@
+# Node.js dependencies
+node_modules/
+
+# Compiled CSS
+dist/css/
+
+# Compiled JavaScript
+dist/js/
+
+# Environment variables
+.env
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Logs
+*.log
+logs/
+
+# Gulp cache
+gulp-cache/
+
+# Sass cache
+.sass-cache/
+
+# Temporary files
+*.tmp
+*.temp

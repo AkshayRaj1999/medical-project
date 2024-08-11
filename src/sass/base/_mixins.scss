@@ -1,0 +1,41 @@
+@mixin section__padding {
+  padding: 64px 0;
+}
+@mixin section__sub__title {
+  font-size: $base-font-size + 2;
+  color: $secondary-color;
+  font-weight: $base-font-weight + 200;
+  line-height: 21.11px;
+  letter-spacing: 0.16em;
+  margin-bottom: 6px;
+}
+@mixin section__title {
+  font-size: $base-font-size * 2;
+  color: $primary-color;
+  font-family: Yeseva One, sans-serif;
+  font-weight: 400;
+  line-height: 36.96px;
+  margin-bottom: 15px;
+}
+@mixin cta__button {
+  padding: 13px 35px 13px 35px;
+  border-radius: 50px;
+  background-color: $third-color;
+  color: $primary-color;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+  font-family: Work Sans,sans-serif;
+  border: 0;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  :hover{
+    background-color: $primary-color;
+    color: $white-color;
+  }
+}
+.about__section{
+  @include section__padding;
+}
