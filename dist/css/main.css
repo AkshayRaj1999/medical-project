@@ -1,0 +1,305 @@
+@font-face {
+  font-family: "Work Sans";
+  src: url("../../../assets/fonts/WorkSans-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../../../assets/fonts/WorkSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../../../assets/fonts/WorkSans-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../../../assets/fonts/WorkSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../../../assets/fonts/WorkSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../../../assets/fonts/WorkSans-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../../../assets/fonts/WorkSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  src: url("../../../assets/fonts/WorkSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Yeseva One";
+  src: url("../../../assets/fonts/YesevaOne-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: Work Sans, sans-serif;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img, video {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+input {
+  outline: none;
+}
+
+.container {
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.about__section {
+  padding: 64px 0;
+}
+
+.heder__top {
+  padding: 19px 0;
+  background-color: #fff;
+  width: 100%;
+}
+
+.heder__top__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo__container {
+  width: 193px;
+  height: auto;
+}
+
+.header__deatilas__container {
+  display: flex;
+}
+.header__deatilas__container .emergency {
+  display: flex;
+  align-items: flex-start;
+  padding-right: 21px;
+}
+.header__deatilas__container .emergency .emergency__content {
+  padding-left: 5.48px;
+}
+.header__deatilas__container .emergency .emergency__content p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.77px;
+}
+.header__deatilas__container .emergency .emergency__content p:nth-child(1) {
+  color: #1f2b6c;
+}
+.header__deatilas__container .emergency .emergency__content p:nth-child(2) {
+  color: #159eec;
+}
+.header__deatilas__container .location {
+  padding-right: 0;
+}
+
+.header__bottom {
+  width: 100%;
+  padding: 17px 0;
+  background-color: #1f2b6c;
+}
+.header__bottom .container nav > ul {
+  display: flex;
+}
+.header__bottom .container nav > ul a {
+  color: #fff;
+  font-size: 18px;
+  line-height: 21.11px;
+  font-weight: 400;
+}
+.header__bottom .container nav > ul li {
+  padding-right: 25px;
+}
+.header__bottom .container nav > ul li:last-child {
+  padding-right: 0;
+}
+.header__bottom .container .header__bottom__cta__container {
+  display: flex;
+  align-items: center;
+}
+.header__bottom .container .header__bottom__cta__container svg {
+  cursor: pointer;
+}
+.header__bottom .container .header__bottom__cta__container .cta__button {
+  padding: 13px 35px 13px 35px;
+  border-radius: 50px;
+  background-color: #BFD2F8;
+  color: #1f2b6c;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.77px;
+  font-family: Work Sans, sans-serif;
+  border: 0;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 25px;
+}
+.header__bottom .container .header__bottom__cta__container .cta__button :hover {
+  background-color: #1f2b6c;
+  color: #fff;
+}
+.header__bottom .container .header__bottom__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero__banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.hero__banner .hero__banner__cta__container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateY(50%) translateX(-50%);
+  z-index: 100;
+  display: flex;
+  gap: 21px;
+}
+.hero__banner .hero__banner__cta__container .cta__appointment {
+  background-color: #1f2b6c;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.hero__banner .hero__banner__cta__container .cta__appointment :hover {
+  scale: 1;
+}
+.hero__banner .hero__banner__cta__container .cta__appointment .cta__appointment__content {
+  padding: 25px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero__banner .hero__banner__cta__container .cta__appointment .cta__appointment__content p {
+  padding-right: 56px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+}
+.hero__banner .hero__banner__cta__container .second-bg {
+  background-color: #BFD2F8;
+}
+.hero__banner .hero__banner__cta__container .third-bg {
+  background-color: #159eec;
+}
+.hero__banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.hero__banner .hero__banner__content {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.hero__banner .hero__banner__content p {
+  font-size: 18px;
+  color: #159eec;
+  font-weight: 700;
+  line-height: 21.11px;
+  letter-spacing: 0.16em;
+  margin-bottom: 6px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.hero__banner .hero__banner__content h1 {
+  font-size: 32px;
+  color: #1f2b6c;
+  font-family: Yeseva One, sans-serif;
+  font-weight: 400;
+  line-height: 36.96px;
+  margin-bottom: 15px;
+  font-size: 48px;
+  max-width: 519px;
+  line-height: 55.44px;
+}
+.hero__banner .hero__banner__content button {
+  padding: 13px 35px 13px 35px;
+  border-radius: 50px;
+  background-color: #BFD2F8;
+  color: #1f2b6c;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.77px;
+  font-family: Work Sans, sans-serif;
+  border: 0;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero__banner .hero__banner__content button :hover {
+  background-color: #1f2b6c;
+  color: #fff;
+}
