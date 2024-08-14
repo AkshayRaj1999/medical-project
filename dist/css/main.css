@@ -83,7 +83,7 @@ ul, ol {
 }
 
 img, video {
-  width: 100%;
+  width: 100% !important;
   height: auto;
   object-fit: contain;
 }
@@ -180,26 +180,6 @@ input {
 .header__bottom .container .header__bottom__cta__container svg {
   cursor: pointer;
 }
-.header__bottom .container .header__bottom__cta__container .cta__button {
-  padding: 13px 35px 13px 35px;
-  border-radius: 50px;
-  background-color: #BFD2F8;
-  color: #1f2b6c;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18.77px;
-  font-family: Work Sans, sans-serif;
-  border: 0;
-  outline: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 25px;
-}
-.header__bottom .container .header__bottom__cta__container .cta__button :hover {
-  background-color: #1f2b6c;
-  color: #fff;
-}
 .header__bottom .container .header__bottom__container {
   display: flex;
   align-items: center;
@@ -225,9 +205,6 @@ input {
   border-radius: 5px;
   cursor: pointer;
 }
-.hero__banner .hero__banner__cta__container .cta__appointment :hover {
-  scale: 1;
-}
 .hero__banner .hero__banner__cta__container .cta__appointment .cta__appointment__content {
   padding: 25px 20px;
   display: flex;
@@ -235,7 +212,7 @@ input {
   justify-content: space-between;
 }
 .hero__banner .hero__banner__cta__container .cta__appointment .cta__appointment__content p {
-  padding-right: 56px;
+  padding-right: 40px;
   color: #fff;
   font-size: 16px;
   font-weight: 400;
@@ -270,6 +247,7 @@ input {
   line-height: 21.11px;
   letter-spacing: 0.16em;
   margin-bottom: 6px;
+  text-transform: uppercase;
   margin-bottom: 8px;
   text-transform: uppercase;
 }
@@ -302,4 +280,84 @@ input {
 .hero__banner .hero__banner__content button :hover {
   background-color: #1f2b6c;
   color: #fff;
+}
+
+.about__section {
+  padding: 64px 0;
+}
+.about__section .about__section__container {
+  padding-top: 64px;
+  padding-bottom: 61px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.about__section .about__section__container p {
+  font-size: 18px;
+  color: #159eec;
+  font-weight: 700;
+  line-height: 21.11px;
+  letter-spacing: 0.16em;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.about__section .about__section__container h3 {
+  font-size: 32px;
+  color: #1f2b6c;
+  font-family: Yeseva One, sans-serif;
+  font-weight: 400;
+  line-height: 36.96px;
+  margin-bottom: 15px;
+}
+.about__section .about__section__container span {
+  padding: 0 167px;
+  margin-bottom: 32px;
+}
+.about__section .about__section__container .redierct__container {
+  display: flex;
+  align-items: center;
+}
+.about__section .about__section__container .redierct__container a {
+  color: #159eec;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 400;
+}
+.about__section .about__section__container .redierct__container svg {
+  margin-left: 10px;
+}
+.about__section .about__section__image__container {
+  width: 100%;
+  height: auto;
+}
+
+.service__section {
+  padding: 64px 0;
+}
+.service__section .service__section__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.service__section .service__section__container p {
+  font-size: 18px;
+  color: #159eec;
+  font-weight: 700;
+  line-height: 21.11px;
+  letter-spacing: 0.16em;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.service__section .service__section__container h3 {
+  font-size: 32px;
+  color: #1f2b6c;
+  font-family: Yeseva One, sans-serif;
+  font-weight: 400;
+  line-height: 36.96px;
+  margin-bottom: 15px;
+  padding-bottom: 64px;
+}
+.service__section .service__section__container .section__section__details__section {
+  display: flex;
 }

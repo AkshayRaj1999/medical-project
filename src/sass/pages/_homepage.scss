@@ -3,36 +3,45 @@
   background-color: $white-color;
   width: 100%;
 }
+
 .heder__top__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .header__logo__container {
   width: 193px;
   height: auto;
 }
+
 .header__deatilas__container {
   display: flex;
+
   .emergency {
     display: flex;
     align-items: flex-start;
     padding-right: 21px;
+
     .emergency__content {
       padding-left: 5.48px;
+
       p {
         font-size: 16px;
         font-weight: 500;
         line-height: 18.77px;
       }
+
       p:nth-child(1) {
         color: $primary-color;
       }
+
       p:nth-child(2) {
         color: $secondary-color;
       }
     }
   }
+
   .location {
     padding-right: 0;
   }
@@ -42,15 +51,18 @@
   width: 100%;
   padding: 17px 0;
   background-color: $primary-color;
+
   .container {
-    nav > ul {
+    nav>ul {
       display: flex;
+
       a {
         color: $white-color;
         font-size: $base-font-size + 2;
         line-height: 21.11px;
         font-weight: 400;
       }
+
       li {
         padding-right: 25px;
 
@@ -59,17 +71,16 @@
         }
       }
     }
+
     .header__bottom__cta__container {
       display: flex;
       align-items: center;
+
       svg {
         cursor: pointer;
       }
-      .cta__button {
-        @include cta__button;
-        margin-left: 25px;
-      }
     }
+
     .header__bottom__container {
       display: flex;
       align-items: center;
@@ -82,6 +93,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
+
   // overflow: hidden;
   .hero__banner__cta__container {
     position: absolute;
@@ -91,20 +103,20 @@
     z-index: 100;
     display: flex;
     gap: 21px;
+
     .cta__appointment {
       background-color: $primary-color;
       border-radius: 5px;
       cursor: pointer;
-      :hover{
-        scale: 1;
-      }
+
       .cta__appointment__content {
         padding: 25px 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         p {
-          padding-right: 56px;
+          padding-right: 40px;
           color: $white-color;
           font-size: 16px;
           font-weight: 400;
@@ -112,13 +124,16 @@
         }
       }
     }
-    .second-bg{
+
+    .second-bg {
       background-color: $third-color;
     }
-    .third-bg{
+
+    .third-bg {
       background-color: $secondary-color;
     }
   }
+
   img {
     position: absolute;
     top: 0;
@@ -128,25 +143,93 @@
     object-fit: cover;
     z-index: 1;
   }
+
   .hero__banner__content {
     position: absolute;
     z-index: 2;
     display: flex;
     align-items: center;
     height: 100%;
+
     p {
       @include section__sub__title;
       margin-bottom: 8px;
       text-transform: uppercase;
     }
+
     h1 {
       @include section__title;
       font-size: 48px;
       max-width: 519px;
       line-height: 55.44px;
     }
+
     button {
       @include cta__button;
+    }
+  }
+}
+
+.about__section {
+  @include section__padding;
+
+  .about__section__container {
+    padding-top: 64px;
+    padding-bottom: 61px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    p {
+      @include section__sub__title;
+    }
+
+    h3 {
+      @include section__title;
+    }
+
+    span {
+      padding: 0 167px;
+      margin-bottom: 32px;
+    }
+
+    .redierct__container {
+      display: flex;
+      align-items: center;
+
+      a {
+        color: $secondary-color;
+        font-family: 'Work Sans';
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      svg {
+        margin-left: 10px;
+      }
+    }
+  }
+  .about__section__image__container{
+    width:100%;
+    height: auto;
+  }
+}
+.service__section{
+  @include section__padding;
+  .service__section__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p{
+      @include section__sub__title;
+    }
+    h3{
+      @include section__title;
+      padding-bottom: 64px;
+    }
+    .section__section__details__section{
+      display: flex;
     }
   }
 }
