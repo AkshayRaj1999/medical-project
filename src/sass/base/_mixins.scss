@@ -1,6 +1,9 @@
 @mixin section__padding {
   padding: 64px 0;
 }
+@mixin section__bottom__padding {
+  padding-bottom: 64px;
+}
 @mixin section__sub__title {
   font-size: $base-font-size + 2;
   color: $secondary-color;
@@ -32,11 +35,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  :hover{
-    background-color: $primary-color;
-    color: $white-color;
-  }
-}
-.about__section{
-  @include section__padding;
 }

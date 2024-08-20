@@ -106,10 +106,6 @@ input {
   margin: 0 auto;
 }
 
-.about__section {
-  padding: 64px 0;
-}
-
 .heder__top {
   padding: 19px 0;
   background-color: #fff;
@@ -179,6 +175,22 @@ input {
 }
 .header__bottom .container .header__bottom__cta__container svg {
   cursor: pointer;
+}
+.header__bottom .container .header__bottom__cta__container .header__cta__button {
+  padding: 13px 35px 13px 35px;
+  border-radius: 50px;
+  background-color: #BFD2F8;
+  color: #1f2b6c;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.77px;
+  font-family: Work Sans, sans-serif;
+  border: 0;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
 }
 .header__bottom .container .header__bottom__container {
   display: flex;
@@ -277,10 +289,6 @@ input {
   align-items: center;
   justify-content: center;
 }
-.hero__banner .hero__banner__content button :hover {
-  background-color: #1f2b6c;
-  color: #fff;
-}
 
 .about__section {
   padding: 64px 0;
@@ -333,7 +341,7 @@ input {
 }
 
 .service__section {
-  padding: 64px 0;
+  padding-bottom: 64px;
 }
 .service__section .service__section__container {
   display: flex;
@@ -358,6 +366,184 @@ input {
   margin-bottom: 15px;
   padding-bottom: 64px;
 }
-.service__section .service__section__container .section__section__details__section {
+.service__section .service__section__container .service__section__department__details {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 20px;
+  width: 100%;
+}
+.service__section .service__section__container .service__section__department__details .department__column__container {
+  grid-column: span 2;
+  width: 100%;
+  height: auto;
   display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid #1f2b6c;
+  background-color: #fff;
+}
+.service__section .service__section__container .service__section__department__details .department__column__container .free__checkup {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.service__section .service__section__container .service__section__department__details .department__column__container .free__checkup svg {
+  margin-bottom: 8px;
+}
+.service__section .service__section__container .service__section__department__details .department__column__container .free__checkup p {
+  font-size: 16px;
+  color: #000;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  font-weight: 400;
+  margin-bottom: 0;
+  text-align: center;
+}
+.service__section .service__section__container .service__section__department__details .department__column__container .view__all {
+  background-color: #1f2b6c;
+  cursor: pointer;
+}
+.service__section .service__section__container .service__section__department__details .department__column__container .view__all p {
+  color: #159eec;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 0;
+  padding: 12px 0;
+}
+.service__section .service__section__container .service__section__department__details .department__text__container {
+  grid-column: span 6;
+  width: 100%;
+  height: auto;
+}
+.service__section .service__section__container .service__section__department__details .department__text__container h3 {
+  font-size: 26px;
+  color: #000;
+  font-family: Work Sans;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 24px;
+  padding: 0;
+}
+.service__section .service__section__container .service__section__department__details .department__text__container .department__text__container_ul__container {
+  display: flex;
+  column-gap: 54px;
+  margin-bottom: 32px;
+}
+.service__section .service__section__container .service__section__department__details .department__text__container .department__text__container_ul__container .department__text__container__first__ul ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.service__section .service__section__container .service__section__department__details .department__text__container .department__text__container_ul__container .department__text__container__first__ul ul li:last-child {
+  margin-bottom: 0;
+}
+.service__section .service__section__container .service__section__department__details .department__text__container .department__text__container_ul__container .department__text__container__first__ul ul li::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #159eec;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.service__section .service__section__container .service__section__department__details .department__text__container p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  text-transform: initial;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+.service__section .service__section__container .service__section__department__details .department__image__container {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.service__section .service__section__container .service__section__department__details .department__image__container .department__image {
+  width: 100%;
+  height: auto;
+}
+
+.specilaity__section {
+  padding-bottom: 64px;
+}
+.specilaity__section .specilaity__section__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.specilaity__section .specilaity__section__container p {
+  font-size: 18px;
+  color: #159eec;
+  font-weight: 700;
+  line-height: 21.11px;
+  letter-spacing: 0.16em;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.specilaity__section .specilaity__section__container h3 {
+  font-size: 32px;
+  color: #1f2b6c;
+  font-family: Yeseva One, sans-serif;
+  font-weight: 400;
+  line-height: 36.96px;
+  margin-bottom: 15px;
+  margin-bottom: 64px;
+}
+.specilaity__section .specilaity__section__container table {
+  width: 100%;
+  height: auto;
+  border-spacing: unset;
+}
+.specilaity__section .specilaity__section__container table td {
+  padding: 50px 0;
+  width: 25%;
+  border: 0.15px solid rgba(0, 0, 0, 0.19);
+}
+.specilaity__section .specilaity__section__container table td .td__content__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.specilaity__section .specilaity__section__container table td .td__content__wrapper svg {
+  margin-bottom: 8px;
+}
+.specilaity__section .specilaity__section__container table td .td__content__wrapper span {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.appointment__section {
+  padding-bottom: 64px;
+}
+.appointment__section .appointment__section__bg__image__container {
+  width: 100%;
+  height: max-content;
+  position: relative;
+}
+.appointment__section .appointment__section__bg__image__container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.appointment__section .appointment__section__bg__image__container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 4;
+  opacity: 0.5;
 }

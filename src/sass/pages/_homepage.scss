@@ -27,7 +27,7 @@
       padding-left: 5.48px;
 
       p {
-        font-size: 16px;
+        font-size: $base-font-size;
         font-weight: 500;
         line-height: 18.77px;
       }
@@ -79,6 +79,11 @@
       svg {
         cursor: pointer;
       }
+
+      .header__cta__button {
+        @include cta__button;
+        margin-left: 30px;
+      }
     }
 
     .header__bottom__container {
@@ -118,7 +123,7 @@
         p {
           padding-right: 40px;
           color: $white-color;
-          font-size: 16px;
+          font-size: $base-font-size;
           font-weight: 400;
           line-height: 22.4px;
         }
@@ -201,7 +206,7 @@
       a {
         color: $secondary-color;
         font-family: 'Work Sans';
-        font-size: 16px;
+        font-size: $base-font-size;
         font-weight: 400;
       }
 
@@ -210,26 +215,233 @@
       }
     }
   }
-  .about__section__image__container{
-    width:100%;
+
+  .about__section__image__container {
+    width: 100%;
     height: auto;
   }
 }
-.service__section{
-  @include section__padding;
-  .service__section__container{
+
+.service__section {
+  @include section__bottom__padding;
+
+  .service__section__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    p{
+
+    p {
       @include section__sub__title;
     }
-    h3{
+
+    h3 {
       @include section__title;
       padding-bottom: 64px;
     }
-    .section__section__details__section{
-      display: flex;
+
+    .service__section__department__details {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 20px;
+      width: 100%;
+
+      .department__column__container {
+        grid-column: span 2;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        border: 1px solid $primary-color;
+        background-color: $white-color;
+
+        .free__checkup {
+          padding: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          cursor: pointer;
+
+          svg {
+            margin-bottom: 8px;
+          }
+
+          p {
+            font-size: $base-font-size;
+            color: $black-color;
+            line-height: 1;
+            letter-spacing: 0;
+            text-transform: capitalize;
+            font-weight: 400;
+            margin-bottom: 0;
+            text-align: center;
+          }
+        }
+
+        .view__all {
+          background-color: $primary-color;
+          cursor: pointer;
+
+          p {
+            color: $secondary-color;
+            font-size: $base-font-size;
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: 0;
+            text-align: center;
+            text-transform: capitalize;
+            ;
+            margin-bottom: 0;
+            padding: 12px 0;
+          }
+        }
+      }
+
+      .department__text__container {
+        grid-column: span 6;
+        width: 100%;
+        height: auto;
+
+        h3 {
+          font-size: 26px;
+          color: $black-color;
+          font-family: Work Sans;
+          font-weight: 500;
+          line-height: 1;
+          margin-bottom: 24px;
+          padding: 0;
+        }
+
+        .department__text__container_ul__container {
+          display: flex;
+          column-gap: 54px;
+          margin-bottom: 32px;
+
+          .department__text__container__first__ul {
+            ul {
+              li {
+                display: flex; // Use flexbox to align bullet and text
+                align-items: center; // Vertically centers the text and bullet
+                margin-bottom: 20px; // Adds spacing between items
+
+                &:last-child {
+                  margin-bottom: 0; // Remove margin for the last child
+                }
+
+                &::before {
+                  content: '';
+                  width: 12px;
+                  height: 12px;
+                  background-color: $secondary-color; // Blue color for the bullet
+                  border-radius: 50%;
+                  margin-right: 10px; // Adds space between the bullet and the text
+                }
+              }
+            }
+          }
+
+        }
+
+        p {
+          font-size: $base-font-size;
+          font-weight: 400;
+          color: $black-color;
+          text-transform: initial;
+          line-height: 1.4;
+          letter-spacing: 0;
+        }
+      }
+
+      .department__image__container {
+        grid-column: span 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .department__image {
+          width: 100%;
+          height: auto;
+        }
+      }
     }
   }
+}
+
+.specilaity__section {
+  @include section__bottom__padding;
+
+  .specilaity__section__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      @include section__sub__title;
+    }
+
+    h3 {
+      @include section__title;
+      margin-bottom: 64px;
+    }
+
+    table {
+      width: 100%;
+      height: auto;
+      border-spacing: unset;
+
+      td {
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        // justify-content: center;
+        padding: 50px 0;
+        width: calc(100%/4);
+        border: 0.15px solid rgba($color: #000000, $alpha: 19%);
+
+        .td__content__wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          svg {
+            margin-bottom: 8px;
+          }
+
+          span {
+            color: $black-color;
+            font-size: $base-font-size;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+.appointment__section{
+  @include section__bottom__padding;
+  .appointment__section__bg__image__container {  
+    width: 100%;  
+    height: max-content;  
+    position: relative; // Added position relative to the container
+  
+    img {  
+      object-fit: cover;  
+      width: 100%;
+      height: 100%;
+    }
+  
+    &::before { 
+      content: '';  
+      width: 100%;  
+      height: 100%;  
+      position: absolute;  
+      inset: 0;  
+      background-color: rgba($color: $white-color, $alpha: 80%);
+      z-index: 4;  
+      opacity: 0.5; // Optional: add opacity if needed
+    }  
+  }
+  
 }
