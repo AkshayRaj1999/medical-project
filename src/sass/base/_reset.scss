@@ -32,3 +32,7 @@ input{
     max-width: 992px;
     margin: 0 auto;
 }
+input,textarea,select{
+    border: none;
+    outline: none;
+}

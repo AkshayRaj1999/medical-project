@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Medical Health Care</title>
   <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="../dist/css/main.css" />
 </head>
 
@@ -608,13 +609,116 @@
     </div>
   </section>
   <section class="appointment__section">
-    <div class="appointment__section__bg__image__container">
-      <img src="../assets/images/appointment-image.jpg" alt="appointment-image">
+    <div class="appointment__content__wrapper">
       <div class="container">
-        1
-      </div>
-    </div>
+        <div class="appointment__inner__content__wrapper">
+          <div class="appointment__text__container">
+            <h3>Book an Appointment</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque placerat scelerisque tortor ornare
+              ornare.
+              Convallis felis vitae tortor augue. Velit nascetur proin massa in. Consequat faucibus porttitor enim et.
+            </p>
+          </div>
+          <div class="appointment__form__container">
+            <form action="" method="post">
+              <div class="row">
+                <div class="col1">
+                  <label for="name" class="visullay__hidden">Name:</label>
+                  <input type="text" id="name" name="name" required placeholder="Name">
+                </div>
+                <div class="col2">
+                  <label for="gender" class="visullay__hidden">Gender:</label>
+                  <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col1">
+                  <label for="email" class="visullay__hidden">Email:</label>
+                  <input type="email" id="email" name="email" required placeholder="Email">
+                </div>
+                <div class="col2">
+                  <label for="phone" class="visullay__hidden">Phone Number:</label>
+                  <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Phone" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col1">
+                  <label for="date" class="visullay__hidden">Select a date:</label>
+                  <input type="text" id="datepicker" name="date" title="date" placeholder="Date">
+                </div>
+                <div class="col2">
+                  <select aria-required="true" aria-invalid="false" name="time" title="time">
+                    <option value="Select time">Select Time</option>
+                    <option value="10:00 am">10:00 am</option>
+                    <option value="10:30 am">10:30 am</option>
+                    <option value="11:00 am">11:00 am</option>
+                    <option value="11:30 am">11:30 am</option>
+                    <option value="12:00 pm">12:00 pm</option>
+                    <option value="12:30 pm">12:30 pm</option>
+                    <option value="02:00 pm">02:00 pm</option>
+                    <option value="02:30 pm">02:30 pm</option>
+                    <option value="03:00 pm">03:00 pm</option>
+                    <option value="03:30 pm">03:30 pm</option>
+                    <option value="04:00 pm">04:00 pm</option>
+                    <option value="04:30 pm">04:30 pm</option>
+                    <option value="05:00 pm">05:00 pm</option>
+                    <option value="05:30 pm">05:30 pm</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col1">
+                  <select aria-required="true" name="doctor" title="doctor" name="doctor">
+                    <option value="Select Doctor">Select Doctor</option>
+                    <option value="Sugeshdevu K. C">Sugeshdevu K. C</option>
+                    <option value="Jasmin Mohammed R C">Jasmin Mohammed R C</option>
+                  </select>
+                </div>
+                <div class="col2">
+                  <select aria-required="true" name="department" title="department">
+                    <option value="Select Department">Select Department</option>
+                    <option value="Obstetrics &amp; Gynecology">Obstetrics &amp; Gynecology</option>
+                    <option value="Neonatology">Neonatology</option>
+                    <option value="Paediatrics">Paediatrics</option>
+                    <option value="Radiology">Radiology</option>
+                    <option value="Laproscopic Surgery">Laproscopic Surgery</option>
+                    <option value="Fertility">Fertility</option>
+                    <option value="Anaesthesiologist">Anaesthesiologist</option>
+                    <option value="Cardiology">Cardiology</option>
+                    <option value="Cosmetic Surgery">Cosmetic Surgery</option>
+                    <option value="Dermatology">Dermatology</option>
+                    <option value="General Surgeon">General Surgeon</option>
+                    <option value="Audiology">Audiology</option>
+                    <option value="General Medicine">General Medicine</option>
+                    <option value="Dietetics">Dietetics</option>
+                    <option value="Physiotherapy">Physiotherapy</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <label class="visullay__hidden">*Remark/Message:</label>
+                <textarea class="form__text__area" name="message" placeholder="Message" class="textarea"></textarea>
+              </div>
+              <div class="row">
+                <button type="submit" class="form__submit__button">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
   </section>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(function () {
+      $("#datepicker").datepicker();
+    });
+  </script>
 </body>
 
 </html>

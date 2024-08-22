@@ -106,6 +106,11 @@ input {
   margin: 0 auto;
 }
 
+input, textarea, select {
+  border: none;
+  outline: none;
+}
+
 .heder__top {
   padding: 19px 0;
   background-color: #fff;
@@ -527,23 +532,139 @@ input {
 .appointment__section {
   padding-bottom: 64px;
 }
-.appointment__section .appointment__section__bg__image__container {
+.appointment__section .appointment__content__wrapper {
+  background-image: url(../../../assets/images/appointment-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
-  height: max-content;
+  min-height: 80svh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper {
+  display: flex;
+  align-items: center;
+}
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__text__container {
+  flex: 1;
+  width: 50%;
+  padding-right: 94px;
+}
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__text__container h3 {
+  font-size: 32px;
+  color: #1f2b6c;
+  font-family: Yeseva One, sans-serif;
+  font-weight: 400;
+  line-height: 36.96px;
+  margin-bottom: 15px;
+  color: #159eec;
+}
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__text__container p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  line-height: 1.4;
+}
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__form__container {
+  flex: 1;
+  width: 50%;
+}
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__form__container form {
+  width: 100%;
+}
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__form__container form .row {
+  display: flex;
+}
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__form__container form .row .col1 {
+  width: 50%;
+}
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__form__container form .row .col1 input {
+  height: 50px;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  color: #159eec;
+  font-size: 16px;
+}
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__form__container form .row .col1 input::placeholder {
+  color: #fff;
+}
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__form__container form .row .col1 select {
+  height: 50px;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 18px;
+  color: #fff;
+  font-size: 16px;
+  -webkit-appearance: none;
+  appearance: none;
   position: relative;
 }
-.appointment__section .appointment__section__bg__image__container img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__form__container form .row .col1 select option {
+  color: #fff;
 }
-.appointment__section .appointment__section__bg__image__container::before {
-  content: "";
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__form__container form .row .col2 {
+  width: 50%;
+}
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__form__container form .row .col2 input {
+  height: 50px;
   width: 100%;
-  height: 100%;
-  position: absolute;
-  inset: 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  z-index: 4;
-  opacity: 0.5;
+  padding-top: 16px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  color: #159eec;
+  font-size: 16px;
+}
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__form__container form .row .col2 input::placeholder {
+  color: #fff;
+}
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__form__container form .row .col2 select {
+  height: 50px;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 18px;
+  color: #fff;
+  font-size: 16px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__form__container form .row .col2 select option {
+  color: #fff;
+}
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__form__container form .row .visullay__hidden {
+  display: none;
+}
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__form__container form input,
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__form__container form textarea,
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__form__container form select {
+  background-color: #1f2b6c;
+}
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__form__container form .form__text__area {
+  width: 100%;
+  padding-left: 20px;
+  padding-top: 16px;
+  padding-bottom: 152px;
+  color: #159eec;
+  font-size: 16px;
+}
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__form__container form .form__text__area::placeholder {
+  color: #fff;
+}
+.appointment__section .appointment__content__wrapper .appointment__inner__content__wrapper .appointment__form__container form .form__submit__button {
+  width: 100%;
+  padding: 15px 0;
+  outline: none;
+  border: 0;
+  background-color: #BFD2F8;
+  color: #1f2b6c;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
 }

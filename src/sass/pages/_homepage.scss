@@ -405,6 +405,7 @@
           flex-direction: column;
           align-items: center;
           justify-content: center;
+
           svg {
             margin-bottom: 8px;
           }
@@ -419,29 +420,162 @@
     }
   }
 }
-.appointment__section{
+
+.appointment__section {
   @include section__bottom__padding;
-  .appointment__section__bg__image__container {  
-    width: 100%;  
-    height: max-content;  
-    position: relative; // Added position relative to the container
-  
-    img {  
-      object-fit: cover;  
-      width: 100%;
-      height: 100%;
+
+  .appointment__content__wrapper {
+    background-image: url(../../../assets/images/appointment-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 80svh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+
+    .appointment__inner__content__wrapper {
+      display: flex;
+      align-items: center;
+
+      .appointment__text__container {
+        flex: 1;
+        width: 50%;
+        padding-right: 94px;
+
+        h3 {
+          @include section__title;
+          color: $secondary-color;
+        }
+
+        p {
+          font-size: $base-font-size;
+          font-weight: $base-font-weight;
+          color: $black-color;
+          line-height: 1.4;
+        }
+      }
+
+      .appointment__form__container {
+        flex: 1;
+        width: 50%;
+
+        form {
+          width: 100%;
+
+          .row {
+            display: flex;
+
+            .col1 {
+              width: 50%;
+
+              input {
+                height: 50px;
+                width: 100%;
+                padding-top: 16px;
+                padding-bottom: 12px;
+                padding-left: 20px;
+                color: $secondary-color;
+                font-size: 16px;
+
+                &::placeholder {
+                  color: $white-color ;
+                }
+              }
+
+              select {
+                height: 50px;
+                width: 100%;
+                padding-top: 16px;
+                padding-bottom: 12px;
+                padding-left: 20px;
+                padding-right: 18px;
+                color: $white-color;
+                font-size: 16px;
+                -webkit-appearance: none;
+                appearance: none;
+                position: relative;
+
+                option {
+                  color: $white-color;
+                }
+              }
+            }
+
+            .col2 {
+              width: 50%;
+
+              input {
+                height: 50px;
+                width: 100%;
+                padding-top: 16px;
+                padding-bottom: 12px;
+                padding-left: 20px;
+                color: $secondary-color;
+                font-size: 16px;
+
+                &::placeholder {
+                  color: $white-color ;
+                }
+              }
+
+              select {
+                height: 50px;
+                width: 100%;
+                padding-top: 16px;
+                padding-bottom: 12px;
+                padding-left: 20px;
+                padding-right: 18px;
+                color: $white-color;
+                font-size: 16px;
+                -webkit-appearance: none;
+                appearance: none;
+
+                option {
+                  color: $white-color;
+                }
+              }
+            }
+
+            .visullay__hidden {
+              display: none;
+            }
+          }
+
+          input,
+          textarea,
+          select {
+            background-color: $primary-color;
+          }
+
+          .form__text__area {
+            width: 100%;
+            padding-left: 20px;
+            padding-top: 16px;
+            padding-bottom: 152px;
+            color: $secondary-color;
+            font-size: 16px;
+
+            &::placeholder {
+              color: $white-color;
+            }
+          }
+
+          .form__submit__button {
+            width: 100%;
+            padding: 15px 0;
+            outline: none;
+            border: 0;
+            background-color: $third-color;
+            color: $primary-color;
+            font-size: $base-font-size;
+            font-weight: $base-font-weight;
+            text-transform: uppercase;
+          }
+        }
+      }
+
     }
-  
-    &::before { 
-      content: '';  
-      width: 100%;  
-      height: 100%;  
-      position: absolute;  
-      inset: 0;  
-      background-color: rgba($color: $white-color, $alpha: 80%);
-      z-index: 4;  
-      opacity: 0.5; // Optional: add opacity if needed
-    }  
   }
-  
 }
