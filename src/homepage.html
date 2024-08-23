@@ -7,6 +7,7 @@
   <title>Medical Health Care</title>
   <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="../dist/css/main.css" />
 </head>
 
@@ -620,15 +621,15 @@
             </p>
           </div>
           <div class="appointment__form__container">
-            <form action="" method="post">
+            <form action="" method="post" id="appointment-form">
               <div class="row">
                 <div class="col1">
                   <label for="name" class="visullay__hidden">Name:</label>
-                  <input type="text" id="name" name="name" required placeholder="Name">
+                  <input type="text" id="name" name="name" placeholder="Name">
                 </div>
                 <div class="col2">
                   <label for="gender" class="visullay__hidden">Gender:</label>
-                  <select id="gender" name="gender" required>
+                  <select id="gender" name="gender">
                     <option value="" disabled selected>Select your gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
@@ -639,11 +640,11 @@
               <div class="row">
                 <div class="col1">
                   <label for="email" class="visullay__hidden">Email:</label>
-                  <input type="email" id="email" name="email" required placeholder="Email">
+                  <input type="email" id="email" name="email" placeholder="Email">
                 </div>
                 <div class="col2">
                   <label for="phone" class="visullay__hidden">Phone Number:</label>
-                  <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Phone" required>
+                  <input type="tel" id="phone" name="phone" placeholder="Phone">
                 </div>
               </div>
               <div class="row">
@@ -652,8 +653,8 @@
                   <input type="text" id="datepicker" name="date" title="date" placeholder="Date">
                 </div>
                 <div class="col2">
-                  <select aria-required="true" aria-invalid="false" name="time" title="time">
-                    <option value="Select time">Select Time</option>
+                  <select name="time" title="time">
+                    <option value="">Select Time</option>
                     <option value="10:00 am">10:00 am</option>
                     <option value="10:30 am">10:30 am</option>
                     <option value="11:00 am">11:00 am</option>
@@ -673,15 +674,15 @@
               </div>
               <div class="row">
                 <div class="col1">
-                  <select aria-required="true" name="doctor" title="doctor" name="doctor">
-                    <option value="Select Doctor">Select Doctor</option>
+                  <select aria-required="true" name="doctor" title="doctor">
+                    <option value="">Select Doctor</option>
                     <option value="Sugeshdevu K. C">Sugeshdevu K. C</option>
                     <option value="Jasmin Mohammed R C">Jasmin Mohammed R C</option>
                   </select>
                 </div>
                 <div class="col2">
                   <select aria-required="true" name="department" title="department">
-                    <option value="Select Department">Select Department</option>
+                    <option value="">Select Department</option>
                     <option value="Obstetrics &amp; Gynecology">Obstetrics &amp; Gynecology</option>
                     <option value="Neonatology">Neonatology</option>
                     <option value="Paediatrics">Paediatrics</option>
@@ -702,7 +703,8 @@
               </div>
               <div class="row">
                 <label class="visullay__hidden">*Remark/Message:</label>
-                <textarea class="form__text__area" name="message" placeholder="Message" class="textarea"></textarea>
+                <textarea class="form__text__area" name="message" placeholder="Message" class="textarea"
+                  style="resize: none"></textarea>
               </div>
               <div class="row">
                 <button type="submit" class="form__submit__button">Submit</button>
@@ -711,14 +713,204 @@
           </div>
         </div>
   </section>
-
+  <section class="doctors__section">
+    <div class="container">
+      <div class="doctors__section__container">
+        <p>Trusted Care</p>
+        <h3>Our Doctors</h3>
+        <div class="doctor__slider__container">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="doc__slider__container">
+                  <div class="doc__image__container">
+                    <img src="../assets/images/doc-1.jpg" alt="doctor nathan">
+                  </div>
+                  <div class="doc__image__details__container">
+                    <h4 class="doc__name">Doctor’s Name</h4>
+                    <h4 class="doc__department">Neurology</h4>
+                    <div class="social__media__container">
+                      <a href="https://www.linkedin.com" target="_blank" rel="noopener">
+                        <img src="../assets/icons/linkedin.png" alt="linkedin-logo">
+                      </a>
+                      <a href="https://www.facebook.com" target="_blank" rel="noopener">
+                        <img src="../assets/icons/facebook.png" alt="facebook-logo">
+                      </a>
+                      <a href="https://www.instagram.com" target="_blank" rel="noopener">
+                        <img src="../assets/icons/instagram.png" alt="instagram-logo">
+                      </a>
+                    </div>
+                    <div class="view__profile__button">
+                      <a href="#">
+                        View Profile
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="doc__slider__container">
+                  <div class="doc__image__container">
+                    <img src="../assets/images/doc-2.jpg" alt="doctor nathan">
+                  </div>
+                  <div class="doc__image__details__container">
+                    <h4 class="doc__name">Doctor’s Name</h4>
+                    <h4 class="doc__department">Neurology</h4>
+                    <div class="social__media__container">
+                      <a href="https://www.linkedin.com" target="_blank" rel="noopener">
+                        <img src="../assets/icons/linkedin.png" alt="linkedin-logo">
+                      </a>
+                      <a href="https://www.facebook.com" target="_blank" rel="noopener">
+                        <img src="../assets/icons/facebook.png" alt="facebook-logo">
+                      </a>
+                      <a href="https://www.instagram.com" target="_blank" rel="noopener">
+                        <img src="../assets/icons/instagram.png" alt="instagram-logo">
+                      </a>
+                    </div>
+                    <div class="view__profile__button">
+                      <a href="#">
+                        View Profile
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="doc__slider__container">
+                  <div class="doc__image__container">
+                    <img src="../assets/images/doc-3.jpg" alt="doctor nathan">
+                  </div>
+                  <div class="doc__image__details__container">
+                    <h4 class="doc__name">Doctor’s Name</h4>
+                    <h4 class="doc__department">Neurology</h4>
+                    <div class="social__media__container">
+                      <a href="https://www.linkedin.com" target="_blank" rel="noopener">
+                        <img src="../assets/icons/linkedin.png" alt="linkedin-logo">
+                      </a>
+                      <a href="https://www.facebook.com" target="_blank" rel="noopener">
+                        <img src="../assets/icons/facebook.png" alt="facebook-logo">
+                      </a>
+                      <a href="https://www.instagram.com" target="_blank" rel="noopener">
+                        <img src="../assets/icons/instagram.png" alt="instagram-logo">
+                      </a>
+                    </div>
+                    <div class="view__profile__button">
+                      <a href="#">
+                        View Profile
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     $(function () {
       $("#datepicker").datepicker();
     });
   </script>
+  <!-- form validation code starts here -->
+  <script>
+    const validation = new window.JustValidate('#appointment-form');
+
+    validation
+      .addField('[name="name"]', [
+        {
+          rule: 'required',
+          errorMessage: 'Name is required',
+        },
+        {
+          rule: 'minLength',
+          value: 3,
+          errorMessage: 'Name must be at least 3 characters long',
+        },
+        {
+          rule: 'maxLength',
+          value: 100,
+          errorMessage: 'Name must be at under 100 characters',
+        },
+      ])
+      .addField('[name="gender"]', [
+        {
+          rule: 'required',
+        }
+      ])
+      .addField('[name="email"]', [
+        {
+          rule: 'required',
+        },
+        {
+          rule: 'required',
+        },
+        {
+          rule: 'email',
+        },
+      ])
+      .addField('[name="phone"]', [
+        {
+          rule: 'required',
+          errorMessage: 'Phone number is required',
+        },
+        {
+          rule: 'customRegexp',
+          value: /^[0-9]{10}$/,
+          errorMessage: 'Enter exactly 10 digits',
+        },
+      ])
+      .addField('[name="date"]', [
+        {
+          rule: 'required'
+        }
+      ])
+      .addField('[name="time"]', [
+        {
+          rule: 'required',
+          errorMessage: 'Please select a time',
+        },
+      ])
+      .addField('[name="doctor"]', [
+        {
+          rule: 'required',
+          errorMessage: 'Doctor name is required',
+        }
+      ])
+      .addField('[name="department"]', [
+        {
+          rule: 'required',
+          errorMessage: 'Please select a department',
+        }
+      ])
+  </script>
+  <!-- form validation code starts here -->
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+  <!-- Swiper -->
 </body>
 
 </html>
